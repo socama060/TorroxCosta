@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo de Página Web</title>
+    <title>El Faro</title>
     <style>
+        /* Estilos CSS */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -29,6 +30,11 @@
         }
         main {
             padding: 20px;
+            text-align: center; /* Para centrar el contenido del carrusel */
+        }
+        .slider-container {
+            max-width: 800px; /* Ancho máximo del carrusel */
+            margin: 0 auto; /* Margen automático para centrar el carrusel */
         }
         footer {
             background-color: #333;
@@ -40,10 +46,13 @@
             width: 100%;
         }
     </style>
+    <!-- Enlaces a la biblioteca Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
 </head>
 <body>
     <header>
-        <h1>Mi Página Web</h1>
+        <h1>Apartamento El Faro</h1>
     </header>
     <nav>
         <a href="#">Inicio</a>
@@ -52,6 +61,28 @@
         <a href="#">Contacto</a>
     </nav>
     <main>
+        <!-- Carrusel de imágenes -->
+        <div class="slider-container">
+            <div class="slider">
+                <div><img src="img/IMG_1.jpg" alt="Imagen 1"></div>
+                <div><img src="IMG/IMG_2.jpg" alt="Imagen 2"></div>
+                <div><img src="IMG/IMG_3.jpg" alt="Imagen 3"></div>
+                <div><img src="img/IMG_4.jpg" alt="Imagen 1"></div>
+                <div><img src="IMG/IMG_5.jpg" alt="Imagen 2"></div>
+                <div><img src="IMG/IMG_6.jpg" alt="Imagen 3"></div>
+                <div><img src="img/IMG_7.jpg" alt="Imagen 1"></div>
+                <div><img src="IMG/IMG_8.jpg" alt="Imagen 2"></div>
+                <div><img src="IMG/IMG_9.jpg" alt="Imagen 3"></div>
+                <div><img src="IMG/IMG_10.jpg" alt="Imagen 3"></div>
+                <div><img src="img/IMG_11.jpg" alt="Imagen 1"></div>
+                <div><img src="IMG/IMG_12.jpg" alt="Imagen 2"></div>
+                <div><img src="IMG/IMG_13.jpg" alt="Imagen 3"></div>
+                <div><img src="img/IMG_14.jpg" alt="Imagen 1"></div>
+                <div><img src="IMG/IMG_15.jpg" alt="Imagen 2"></div>
+                <div><img src="IMG/IMG_16.jpg" alt="Imagen 3"></div>
+            </div>
+        </div>
+        <!-- Otro contenido principal -->
         <h2>Bienvenido a Mi Página Web</h2>
         <p>Esta es una página web de ejemplo. Puedes editar este código y personalizarlo según tus necesidades.</p>
         <p>¡Espero que te sirva como punto de partida para tu propio proyecto web!</p>
@@ -59,5 +90,19 @@
     <footer>
         <p>&copy; 2023 Mi Página Web</p>
     </footer>
+    <!-- Scripts de JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        // Inicializar el carrusel de imágenes
+        $(document).ready(function(){
+            $('.slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: true
+            });
+        });
+    </script>
 </body>
 </html>
